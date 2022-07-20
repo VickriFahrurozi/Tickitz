@@ -1,0 +1,19 @@
+.container-fluid{
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color: #ffffff;
+}
+.navbar{
+    margin: 0px;
+    padding-left: 130px;
+    padding-right: 130px;
+    position: relative;
+    justify-content: space-between;
+    background-color:white;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+

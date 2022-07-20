@@ -1,0 +1,645 @@
+.scheduled {
+    margin-right: 32px;
+}
+
+.navbar-toggler-icon{
+    border : 5px solid black;
+    border-radius: 60%;
+}
+.zoom-transition-effect{
+    display: none;
+    
+  }
+  
+  .zoom-transition:hover{
+      background-color: white;
+      border:1px solid gray !important;
+  }
+  .zoom-transition:hover .zoom-transition-effect{
+    visibility: visible;
+    display: block;
+  }
+  
+  .hover-card{
+  justify-content: center;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-right: 0%;
+  }
+  
+  .container-fluid .threepicture {
+  position: relative;
+  }
+  .home{
+      margin-left: 37px;
+      margin-right: 32px;
+  }
+      
+  .btn-sign-up {
+      background-color: #5F2EEA;
+      border-radius: 4px;
+      color: white;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      padding-right:1.5rem ;
+      padding-left: 1.5rem;
+      
+      }
+  
+  .nav-font{
+      color: #414141;  
+     
+  }     
+  .threepicture{
+      border-radius: 10px;
+      justify-content: flex-end;
+      margin-top: 0px;
+  }
+  
+  .content-left{
+    
+      font-size: 26px;
+      color:gray;
+      /* padding-left: 5%; */
+  
+      display: grid;
+      place-content:center;
+  }
+  .content-left .find-out-now{
+      font-family: 'Mulish', sans-serif;
+      color:#5F2EEA;
+      font-weight: bold;
+      font-size: 56px;
+       
+  }
+  .content-left .word{
+      /* margin-left: -10rem */
+      /* padding-top: 19% */
+  }
+  
+  .content-right{
+      text-align: center;
+  
+  }
+  
+  .now-showing{
+      background-color:#F5F6F8;
+      color: #5F2EEA;
+  }
+  
+  .now-showing-word{
+      font-size: 24px;
+      font-weight: 600;
+  }
+  .upcoming-movies{
+      background-color:#ffff;
+      color: #5F2EEA;
+  }
+  
+  .upcoming-movies-word{
+      font-size: 24px;
+      font-weight: 600;
+  color: black;
+  }
+  
+  .view-all-word{
+      font-size: 16px;
+      font-weight: 600;
+      padding-right: 160px;;
+  }
+  
+  .image-card{
+      margin: 32px;
+  }
+  .margin-card{
+      margin-left: 24px;
+      margin-right: 24px;
+  }
+  
+  .movie-list{
+  padding-left: 130px;
+  width: 110%;
+  padding-bottom: 104px;
+  }
+  
+  .card-movie-list{
+      width: 100%;
+  }
+  .upcoming-movie-list{
+      padding-left: 130px;
+      width: 110%;
+      padding-bottom: 104px;
+      }
+  
+  .now-showing-movie-list{
+          padding-left: 130px;
+          width:100%;
+          padding-bottom: 104px;
+          }
+  
+  .Now-Showing-word-list{
+      margin-top: 100px;
+      margin-bottom: 50px;
+      padding-top: 50px;
+      padding-left: 130px;
+  }
+  
+  .upcoming-movies-word-list{
+      margin-bottom: 25px;
+      padding-top: 50px;
+      padding-left: 130px;
+  }
+  .card{
+    background-color: #F5F6F8
+  }
+  .card-upcoming-movie-list
+  {
+      background-color: white;
+    
+  }
+  
+  .border-white{
+      border:3px solid white;
+  }
+  .purple-line{
+      margin-left: 35px;
+      width: 100px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: #5F2EEA;
+      margin-bottom: 3%;
+  }
+  .btn-outline-primary{
+      color: #5F2EEA ;
+      border:1px solid #5F2EEA;
+  }
+  .btn-outline-danger{
+      color: #5F2EEA ;
+      border:1px solid #5F2EEA;
+      margin: 15%;
+      margin-top: 5%;
+    
+  
+  }
+  .active-month{
+      color:white;
+      background-color: #5F2EEA;
+  }
+  .shadow-lg{
+  background-color: #5F2EEA;
+  }
+  
+  .upcoming-month{
+      margin-right: 16px;
+  }
+  .month-list{
+      padding-left: 150px;
+      margin-bottom: 50px;
+  }
+  
+  .movie-title{
+      color: black;
+      font-weight: 700;
+      font-size:24px;
+      text-align: center;
+  }
+  
+  .movie-genre{
+      font-size: 16px;
+      color:gray;
+      font-weight: 500;
+  }
+  
+  .movie-box{
+     text-align: center;
+     display: grid;
+     place-content: center;
+     background-color: white;;
+     margin-right:6.5% ;
+     margin-left:6.5% ;
+     margin-bottom: 6.5%;
+     border:none;
+  
+  
+  }
+  
+  .email-join{
+  
+      
+  }
+  
+  .movie-box-small-word{
+      font-size: 24px;
+      color: black;
+      padding-top: 15%;
+  }
+  
+  .movie-box-large-word{
+      font-size:48px;
+      font-weight: 700;
+  }
+  
+  .join-now{
+      background-color: #5F2EEA;
+  color: white;
+  }
+  
+  .email-join{
+      margin-right: 20px;
+  }
+  
+  .card .by-joining{
+      background-color: white;
+      border: none;
+      color:grey;
+      margin-top: 10%;
+      padding-bottom: 15%;
+  }
+  
+  .footer{
+      background-color: white;
+  }
+  
+  .footer-content{
+     margin-left: 6.5%;
+     margin-right:5%
+  }
+  
+  .footer-content-1{
+      background-color: white;
+      border: none;
+      font-size: 24px;
+      margin-right: 0.5%;
+  }
+  .footer-content-2{
+      background-color:white;
+      border: none;
+      margin-right: 0.5%;
+      font-size: 20px;
+  }
+  .footer-content-3{
+      background-color: white;
+      border: none;
+      margin-right: 0.5%;
+  }
+  .footer-content-4{
+      background-color: white;
+      border: none;
+      margin-right: 0.5%;
+  }
+  
+  .footer-logo{
+      width: 40%;
+      margin-bottom: 4%;
+  }
+  
+  .footer-text-1{
+      margin-right: 30%;
+      margin-left: 0;
+      color: #6E7191;
+  }
+  
+  .footer-text-2{
+      font-size: 20px;
+      color : black;
+      font-weight: 700;
+      padding-left: 3%;
+  
+  }
+  
+  .footer-text-3{
+      font-size: 20px;
+      color : black;
+      font-weight: 700;
+      padding-left: 3%;
+  
+  }
+  
+  .footer-text-2-2{
+      margin-top: 10%;
+      color: gray
+  }
+  
+  .our-sponsor{
+      width: 50%;
+  }
+  
+  .our-sponsor-1{
+  margin-top: 13%;
+  margin-bottom: 13%;
+  }
+  
+  .our-sponsor-2{
+      margin-bottom: 13%;
+      }
+  .our-sponsor-3{
+      margin-bottom: 13%;
+      }
+  
+  .follow-us-1{
+          margin-top: 13%;
+          margin-bottom: 15%;
+          }
+          
+  .follow-us-2{
+              margin-bottom: 15%;
+              }
+  .follow-us-3{
+              margin-bottom: 15%;
+              }
+  .follow-us-4{
+              margin-bottom: 15%;
+              }
+  .social-media{
+      font-size: 18px;
+      margin-left: 7%;
+      color: gray;
+  }
+  
+  .copyright{
+      display: grid;
+      place-content: center;
+      padding-bottom: 2%;
+      color:gray;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      .width-main{
+          display: none;
+      }
+  
+      body {
+        background-color: white;
+      }
+      .navbar{
+          padding-left: 5%;
+          padding-right: 5%;
+          margin-left: -10.5%;
+          margin-right: -9.93%;
+      }
+     
+  .navbar-collapse{
+  
+      text-align: center;
+      font-size: 36px;
+      font-weight: 500;
+      padding-right: -100%;
+  }
+  .image-logo-navbar{
+      margin-left: 10%;
+      width: 20%;
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+     
+  }
+  .navbar-toggler{
+      margin-right: 10%;
+  }
+  .nav-font{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      color: black !important;
+      border: 1px solid  #DEDEDE;
+      border-left: 0px solid black;
+      border-right: 0px solid black;
+    }
+  
+  .width-a{
+     
+  }
+  
+  .copyright-a{
+      color: gray;
+      font-size: 25px;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      border: 1px solid #DEDEDE;
+  }
+  .content-left-a{
+      justify-content: left;
+      margin-left: 3%;
+      margin-top: 12%;
+      margin-bottom: 5%;
+  }
+  .nearest-cinema-a{
+      color:#cfcece
+  }
+  .content-right-a{
+  width: 100%;
+  padding-bottom: 25%;
+  }
+  .now-showing-a{
+      background-color: #D6D8E7;
+  }
+  .upcoming-movies-word-list-a{
+      padding-top: 10%;
+      padding-left: 3%;
+  }
+  .now-showing-word-a{
+      font-size: 40px;
+      padding-bottom: 5%;
+  }
+  
+  .view-all-word-a{
+      font-size:25px ;
+      padding-right: 5%;
+      padding-top: 2%;
+  }
+  
+  .card-movie-list-a{
+      width: 310%;
+      margin-left:-12%;
+  }
+  
+  .upcoming-movie-list-a{
+  background-color:#D6D8E7;
+  border-radius: 15px;
+  }
+  .upcoming-movie-list-a-a{
+  background-color:#FFFFFF;
+  border: 1px solid gray !important;
+  border-radius: 15px;
+  }
+  
+  .upcoming-movies-a{
+  
+  }
+  .upcoming-movies-word-a{
+      margin-left: -23%;
+      font-size: 200%;
+  }
+  
+  .view-all-word-a{
+      margin-right: 1%;
+      margin-top: -1%;
+  }
+  
+  .upcoming-month-a{
+      width: 130%;
+      padding: 20px;
+      /* padding: 17%;
+      padding-top: 10%;
+      padding-bottom: 10%; */
+  
+      font-size: 30px;
+      border-radius: 15px;
+  }
+  
+  .month-list-a{
+      margin-left: -15%;
+  }
+  
+  .col-month-list-a{
+      margin-right: 13%;
+  
+  }
+  
+  .movie-title-a{
+      font-size: 35px;
+  }
+  
+  .movie-genre-a{
+      font-size: 25px;
+      color:#cfcece
+  }
+  .btn-outline-danger-a{
+      font-size: 25px;
+      padding-left: 19%;
+      padding-right: 19% ;
+      margin-bottom: 10%;
+  }
+  
+  .movie-box-a{
+      padding-top: 15%;
+      padding-bottom: 15%;
+  }
+  
+  .form-control-a{
+      font-size: 30px;
+  width: 98%;
+  padding: 6%;
+  margin-left: 3%;
+  }
+  .form-control-a-a{
+      font-size: 30px;
+      margin-top: 9%;
+      width: 90%;
+      padding: 7%;
+      }
+  
+  .movie-box-small-word-a{
+      font-size: 35px;
+      margin-top: 0;
+      margin-left:0;
+      color: gray;
+  }
+  
+  .movie-box-large-word-a{
+      font-size: 70px;
+      margin-top: -7%;
+      margin-bottom: 20%;
+  }
+  
+  .bottom-text-a{
+      font-size: 30px;
+  }
+  
+  .by-joining-a{
+      padding-top: 7%;
+      color: #6E7191
+  }
+  
+  .be-guard{
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .footer-a{
+      margin-top: 30%;
+  }
+  
+  .footer-logo-a{
+      width: 50%;
+  }
+  .footer-text-1-a{
+      font-size: 35px;
+      color:#6E7191;
+  }
+  
+  .footer-text-2-a{
+      font-size: 40px;
+      margin-top: 10%;
+      font-weight: 600;
+  }
+  
+  .text-footer-a{
+      font-size: 30px;
+      margin-top: -7%;
+  }
+  
+  .our-sponsor-a{
+      width: 50%;
+  }
+  
+  .our-sponsor-1-a{
+      margin-top: 34;
+      margin-right: 1cm;
+  }
+  .our-sponsor-2-a{
+      margin-top: 18%;
+      margin-right: 1cm;
+  }
+  
+  .our-sponsor-3-a{
+      margin-top: 18%;
+  }
+  
+  .footer-content-3-a{
+      width: 120%;
+  }
+  
+  .footer-text-2-a-a{
+      font-size: 35px;
+      margin-top: 10%;
+      font-weight: 600;
+  }
+  
+  .follow-us-1-a{
+      margin-right: 25%;
+      margin-top: 10%;
+  }
+  
+  .follow-us-2{
+      margin-right: 25%;
+      margin-top: 10%;
+  }
+  
+  .follow-us-3{
+      margin-right: 25%;
+      margin-top: 10%;
+  }
+  
+  .follow-us-4{
+      width: 100%;
+      margin-right: 25%;
+      margin-top: 10%;
+  }
+  
+  .last-text{
+      margin-top: 15%;
+      margin-bottom: 10%;
+      margin-left: -20%;
+      font-size: 30px;
+  }
+  
+  }
+  
+  @media only screen and (min-width: 992px) {
+      .width-a{
+  display: none;
+      }
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;700&display=swap');

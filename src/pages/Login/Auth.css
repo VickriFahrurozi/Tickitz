@@ -1,0 +1,77 @@
+.Auth-main{
+
+    padding-right: 10%;
+    padding-left: 10%;
+   
+}
+.text-align{
+    text-align: left;
+    margin-left: 10%;
+    font-size: 20px;
+}
+
+.Auth-sign-up{
+    font-size: 55px ;
+    font-weight:bold
+}
+.sign-in-up-button{
+    background-color:#5F2EEA;
+    border-radius: 15px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.text-bottom-auth{
+
+}
+
+.Auth-left{
+    background-position: center;
+    background-repeat: no-repeat;
+  background-size:cover;
+
+}
+.Auth-right{
+
+    margin-top: 5%;
+
+}
+
+.Auth-field{
+    margin-left:10%;
+    margin-right: 10%;
+}
+.inputfields{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 10px;
+
+}
+
+
+.Auth-logo
+{
+    position:absolute;
+    left: 19%;
+    top: 37%;
+}
+
+.Auth-text{
+        position:absolute;
+        top: 55%;
+        left: 20%;
+        font-size: 200%;
+        color: white
+}
+
+@media only screen and (min-width: 769px) {
+
+    .tickitz-logo{
+        display: none;
+    }
+
+    .width-a{
+        display: none;
+    }
+   
+}
+
