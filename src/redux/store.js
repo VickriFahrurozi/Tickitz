@@ -19,6 +19,7 @@ let store = createStore(persistedReducer, applyMiddleware(thunk, logger)); // CA
 let persistor = persistStore(store);
 export { store, persistor };
 
+//Tes Github
 // export default () => { // CARA REDUX NYA
 //
 // 	let store = createStore(persistedReducer);

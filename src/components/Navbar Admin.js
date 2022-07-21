@@ -12,7 +12,7 @@ const NavbarAdmin = ({ Nama = 'ASD' }) => {
 		// navigate('/Login', { replace: true });
 		window.location.reload();
 	};
-
+	//Tes github
 	useEffect(() => {}, [Refetch]);
 	return (
 		<>
