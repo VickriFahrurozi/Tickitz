@@ -46,7 +46,7 @@ const Login = () => {
 			let convert = JSON.parse(localStorage.getItem('AccountData')) ?? {};
 			axios({
 				method: 'POST',
-				url: `http://localhost:3001/api/v1/account/VerifyRole?token=${convert.data.token}`,
+				url: `${process.env.URL_API}/account/VerifyRole?token=${convert.data.token}`,
 			})
 				.then((res) => {
 					if (res.data.role == 222) {
@@ -85,7 +85,7 @@ const Login = () => {
 		// 	const result = await axios({
 		// 		method: 'POST',
 		// 		data: LoginData,
-		// 		url: 'http://localhost:3001/api/v1/account/login',
+		// 		url: '${process.env.URL_API}/account/login',
 		// 	});
 
 		// 	if (result.data.ID) {

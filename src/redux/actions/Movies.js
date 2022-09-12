@@ -41,7 +41,7 @@ export const getMovies = (limit = 10, page = 1) => {
 		// try {
 		// 	const result = axios({
 		// 		method: 'GET',
-		// 		url: `http://localhost:3001/api/v1/movies/?limit=${limit}&page=${page}`,
+		// 		url: `${process.env.URL_API}/movies/?limit=${limit}&page=${page}`,
 		// 	});
 		// 	console.log(result);
 		// 	if (result.data) {
@@ -56,7 +56,7 @@ export const getMovies = (limit = 10, page = 1) => {
 		dispatch(getMoviesRequest()); //PAKE THEN CATCH
 		axios({
 			method: 'GET',
-			url: `http://localhost:3001/api/v1/movies/?limit=${limit}&page=${page}`,
+			url: `${process.env.URL_API}/movies/?limit=${limit}&page=${page}`,
 		})
 			.then((res) => {
 				//success
@@ -73,7 +73,7 @@ export const addMovies = (data, token) => {
 		axios({
 			method: 'POST',
 			data: data,
-			url: `http://localhost:3001/api/v1/movies/`,
+			url: `${process.env.URL_API}/movies/`,
 			headers: {
 				token: token,
 			},

@@ -72,7 +72,7 @@ export const Footer = () => {
 				</div>
 			</footer>
 			;{/* <!-- FOOTER RESPONSIVE --> */}
-			<footer className='container-fluid row footer bg-white width-main'>
+			<footer className='container-fluid row footer bg-white width-main bg-info'>
 				<div className='col footer-content d-flex'>
 					<div className='card col-4 footer-content-1'>
 						<img className='footer-logo' src={NavbarLogo} alt='' />

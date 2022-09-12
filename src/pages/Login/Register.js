@@ -3,44 +3,34 @@
 import './Auth.css';
 import { BackgroundUngu, Tickitz } from '../../components/Asset/Picture Asset';
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RegisterAuth } from '../../redux/actions/Auth';
 const Register = () => {
+	const data = useSelector((state) => state.authregister);
+	const datalogin = useSelector((state) => state.auth);
+	console.log(data.data.email, 'ini auth register');
 	let navigate = useNavigate();
+	const dispatch = useDispatch();
 	const [RegisterData, setRegisterData] = useState({
 		email: '',
 		password: '',
 		confirmpassword: '',
+		first_name: '',
+		last_name: '',
+		phone_number: '',
 	});
 
-	const handleRegister = async (e) => {
-		e.preventDefault();
-		if (RegisterData.email == '' || RegisterData.password == '') {
-			alert('Fields Cannot Be Empty');
-		} else if (RegisterData.password != RegisterData.confirmpassword) {
-			alert('Password Not Match');
-		} else {
-			try {
-				console.log(RegisterData);
-				const result = await axios({
-					method: 'POST',
-					data: RegisterData,
-					url: 'http://localhost:3001/api/v1/account',
-				});
-
-				if (result.data.email) {
-					console.log(result.data);
-					alert(result.data.message);
-					navigate('/Login', { replace: true });
-				} else {
-					console.log(result.data.message);
-					alert(result.data.message);
-				}
-			} catch (error) {
-				console.log(error.response);
-				alert(error.response.data.message);
-			}
-		}
+	useEffect(() => {
+		// if (datalogin.data.role == '222') {
+		// 	navigate('/Login', { replace: true });
+		// }
+		// if (data.data.email == RegisterData.email) {
+		// 	navigate('/Login', { replace: true });
+		// }
+	}, [RegisterData]);
+	const handleRegister = () => {
+		dispatch(RegisterAuth(RegisterData));
 	};
 	return (
 		<>
@@ -98,6 +88,54 @@ const Register = () => {
 									setRegisterData((prevState) => ({
 										...prevState,
 										confirmpassword: e.target.value,
+									}));
+								}}
+							/>
+						</div>
+					</div>
+					<div>
+						<p className='first-name text-align'>First Name</p>
+						<div className='Auth-field pb-3'>
+							<input
+								className=' card inputfields col-12'
+								type='text'
+								placeholder='Input Your First Name'
+								onChange={(e) => {
+									setRegisterData((prevState) => ({
+										...prevState,
+										first_name: e.target.value,
+									}));
+								}}
+							/>
+						</div>
+					</div>
+					<div>
+						<p className='first-name text-align'>Last Name</p>
+						<div className='Auth-field pb-3'>
+							<input
+								className=' card inputfields col-12'
+								type='text'
+								placeholder='Input Your Last Name'
+								onChange={(e) => {
+									setRegisterData((prevState) => ({
+										...prevState,
+										last_name: e.target.value,
+									}));
+								}}
+							/>
+						</div>
+					</div>
+					<div>
+						<p className='first-name text-align'>Phone Number</p>
+						<div className='Auth-field pb-3'>
+							<input
+								className=' card inputfields col-12'
+								type='number'
+								placeholder='Input Your Phone Number'
+								onChange={(e) => {
+									setRegisterData((prevState) => ({
+										...prevState,
+										phone_number: e.target.value,
 									}));
 								}}
 							/>

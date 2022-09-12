@@ -43,7 +43,7 @@ const HomeAdmin = () => {
 						<>{navigate('/Login', { replace: true })}</>
 					) : (
 						<>
-							<NavbarAdmin Nama={UserLogin.ID.data.ID} />
+							<NavbarAdmin Nama={'Admin'} />
 							<AdminNowShowing />
 						</>
 					)}

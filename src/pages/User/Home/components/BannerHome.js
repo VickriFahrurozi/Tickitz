@@ -28,20 +28,22 @@ const BannerHomeMain = () => {
 const BannerHomeResponsive = () => {
 	return (
 		<>
-			<div className='container-fluid threepicture width-a'>
-				<div className='row'>
-					<div className='row content-left content-left-a '>
-						<div className='word'>
-							<span className='content-left nearest-cinema nearest-cinema-a '>
-								Nearest Cinema,Newest Movie,
-							</span>
-							<p className='content-left find-out-now'>
-								<span>Find out now!</span>
-							</p>
+			<div className='movie-box-responsive'>
+				<div className='container-fluid threepicture width-a '>
+					<div className='row'>
+						<div className='row content-left content-left-a  '>
+							<div className='word'>
+								<span className='content-left nearest-cinema nearest-cinema-a '>
+									Nearest Cinema,Newest Movie,
+								</span>
+								<p className='content-left find-out-now'>
+									<span>Find out now!</span>
+								</p>
+							</div>
 						</div>
-					</div>
-					<div className='row content-right content-right-a'>
-						<img src={Gambar3Film} alt='' />
+						<div className='row content-right content-right-a '>
+							<img src={Gambar3Film} alt='' />
+						</div>
 					</div>
 				</div>
 			</div>

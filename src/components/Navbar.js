@@ -1,17 +1,24 @@
 /** @format */
 import { NavbarLogo } from './Asset/Picture Asset';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthLogout } from '../redux/actions/Auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import '../pages/User/Home/home.css';
 export const Navbar = () => {
+	const data = useSelector((state) => state.auth);
+	let dispatch = useDispatch();
 	let navigate = useNavigate();
 	const handlelogout = () => {
 		localStorage.removeItem('AccountData');
+		dispatch(AuthLogout());
 		// navigate('/Login', { replace: true });
 		window.location.reload();
 	};
+
 	return (
 		<>
-			{/* <!-- NAVIGATION BAR --> */}
-			<nav className='navbar navbar-expand-lg bg-white'>
+			<nav className='navbar navbar-expand-lg '>
 				<div className='container-fluid'>
 					<img className='image-logo-navbar' src={NavbarLogo} alt='' />
 					<button
@@ -70,7 +77,7 @@ export const NavbarGuest = () => {
 	return (
 		<>
 			{/* <!-- NAVIGATION BAR --> */}
-			<nav className='navbar navbar-expand-lg bg-white'>
+			<nav className='navbar navbar-expand-lg  navbar-responsive '>
 				<div className='container-fluid'>
 					<img className='image-logo-navbar' src={NavbarLogo} alt='' />
 					<button

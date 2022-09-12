@@ -12,10 +12,11 @@ const UpcomingMovies = () => {
 		<>
 			{/* <!-- CONTENT KE -3 -->*/}
 			{/*<!--RESPONSIVE --> */}
-			<div className='container-fluid upcoming-movies width-a upcoming-movies-a'>
+			<div className='container-fluid upcoming-movies width-a upcoming-movies-a '>
 				<UpcomingMoviesWordResponsive />
 				<MonthListResponsive />
 				<UpcomingMoviesListResponsive />
+
 				<EmailTypeResponsive />
 			</div>
 			{/* <!-- Main --> */}

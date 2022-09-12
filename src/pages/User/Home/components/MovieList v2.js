@@ -44,7 +44,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 
 		axios({
 			method: 'GET',
-			url: 'http://localhost:3001/api/v1/scheduled/',
+			url: `${process.env.URL_API}/scheduled/`,
 		})
 			.then((res) => {
 				setMovieSchedule(res.data.list);
@@ -122,7 +122,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 				const result = await axios({
 					method: 'POST',
 					data: FormAddData,
-					url: 'http://localhost:3001/api/v1/scheduled/',
+					url: `${process.env.URL_API}/scheduled/`,
 				});
 				if (result.data.status == 200) {
 					alert('BERHASIL');
@@ -140,7 +140,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 				const result = await axios({
 					method: 'DELETE',
 					data: FormDeleteData,
-					url: 'http://localhost:3001/api/v1/scheduled/',
+					url: `${process.env.URL_API}/scheduled/`,
 				});
 				if (result.data.status == 200) {
 					alert('BERHASIL');

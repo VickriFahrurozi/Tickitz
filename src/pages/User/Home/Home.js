@@ -17,7 +17,7 @@ const Home = () => {
 		loading: true,
 	});
 	useEffect(() => {
-		document.title = 'Ticktitz : Admin Home';
+		document.title = 'Ticktitz : Home';
 
 		if (localStorage.getItem('AccountData')) {
 			setUserLogin((prevData) => ({

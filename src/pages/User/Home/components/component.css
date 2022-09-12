@@ -3,6 +3,7 @@
   height: 265px;
 }
 
+.image-card -now-showing
 .btn.btn-primary.col-1 
 {
 margin-left: 7%;
@@ -15,7 +16,7 @@ background-color:#5F2EEA;
 }
 
 .movie_title{
-    font-size: 27px;
+    font-size: 20px;
     text-align: center;
     margin-bottom : -10px;
     margin-top: 10px;
@@ -132,6 +133,7 @@ background-color:#5F2EEA;
      
      .image-card{
          margin: 32px;
+        width: 150px;
      }
      .margin-card{
          margin-left: 24px;

@@ -16,7 +16,9 @@ const HomeGuest = () => {
 			<NavbarGuest />
 			<BannerHome />
 			<NowShowing />
+
 			<UpcomingMovies />
+
 			<Footer />
 		</>
 	);

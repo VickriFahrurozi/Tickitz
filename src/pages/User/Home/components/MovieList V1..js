@@ -37,7 +37,7 @@ export const NowShowingMoviesList = () => {
 
 		axios({
 			method: 'GET',
-			url: 'http://localhost:3001/api/v1/scheduled/',
+			url: `${process.env.URL_API}/scheduled/`,
 		})
 			.then((res) => {
 				setMovieSchedule({
@@ -106,135 +106,224 @@ export const NowShowingMoviesList = () => {
 };
 
 export const UpcomingMoviesListResponsive = () => {
+	const [Movie, setMovie] = useState({
+		loading: false,
+		result: {
+			list: [],
+		},
+	});
+	useEffect(() => {
+		setMovie((prevState) => ({
+			...prevState,
+			loading: true,
+		}));
+
+		axios({
+			method: 'GET',
+			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+		})
+			.then((res) => {
+				setMovie({
+					loading: false,
+					result: res.data,
+				});
+			})
+			.catch((res) => {
+				console.log('Failed');
+			});
+	}, []);
+
 	return (
 		<>
-			<div className='overflow-auto'>
-				<div className='row d-flex card-movie-list card-movie-list-a '>
-					<div className='row container d-flex upcoming-movie-list  '>
-						<div className='col card border-white col-2 upcoming-movie-list-a-a'>
-							<img className='image-card' src={BlackWidow} alt='' />
-							<p className='movie-title movie-title-a'>Black Widow</p>
-							<p className='movie-title movie-genre movie-genre-a'>
-								Action,Adventure,Sci-Fi
-							</p>
-							<button className='btn btn-outline-danger btn-outline-danger-a'>
-								Details
-							</button>
-						</div>
-						<div className='col card border-white  margin-card col-2 upcoming-movie-list-a-a'>
-							<img className='image-card' src={TheWitches} alt='' />
-							<p className='movie-title movie-title-a'>The Witches</p>
-							<p className='movie-title movie-genre movie-genre-a'>
-								Adventure, Comedy,Family
-							</p>
-							<button className='btn btn-outline-danger btn-outline-danger-a'>
-								Details
-							</button>
-						</div>
-						<div className='col card border-white col-2 upcoming-movie-list-a-a'>
-							<img className='image-card' src={Tenet} alt='' />
-							<p className='movie-title movie-title-a'>Tent</p>
-							<p className='movie-title movie-genre movie-genre-a'>
-								Action,Sci-Fi
-							</p>
-							<button className='btn btn-outline-danger btn-outline-danger-a'>
-								Details
-							</button>
-						</div>
-						<div className='col card border-white margin-card col-2 upcoming-movie-list-a-a'>
-							<img className='image-card' src={BlackWidow} alt='' />
-							<p className='movie-title movie-title-a'>Black Widow</p>
-							<p className='movie-title movie-genre movie-genre-a'>
-								Action,Adventure,Sci-Fi
-							</p>
-							<button className='btn btn-outline-danger btn-outline-danger-a'>
-								Details
-							</button>
-						</div>
-						<div className='col card border-white col-2 upcoming-movie-list-a-a'>
-							<img className='image-card' src={TheWitches} alt='' />
-							<p className='movie-title movie-title-a'>The Witches</p>
-							<p className='movie-title movie-genre movie-genre-a'>
-								Adventure, Comedy,Family
-							</p>
-							<button className='btn btn-outline-danger btn-outline-danger-a'>
-								Details
-							</button>
+			{Movie.loading ? (
+				<Loading />
+			) : (
+				<>
+					<div className='row d-flex card-movie-list mb-5 '>
+						<div className='row container d-flex upcoming-a-movie-list '>
+							{!Movie.result.list.length ? (
+								<EmptyState />
+							) : (
+								<div className='row '>
+									<div className='col overflow-auto'>
+										<div className=' col d-flex  '>
+											{Movie.result.list.map((item, index) => {
+												//pake index sama key , kaitannya sama SEO
+												return (
+													<>
+														<div
+															className='col mt-5 mb-5 card bg-transparent border-black margin-card col-sm-5 col-md-2  justify-content-center align-items-center'
+															key={index}
+														>
+															<p className='h5 mt-4'>{item.title}</p>
+															<img
+																className='image-card -now-showing'
+																src={`http://localhost:3001/uploads/${item.cover}`}
+																alt={item.title}
+																title={item.title}
+																width={100}
+																height={100}
+															/>
+														</div>
+													</>
+												);
+											})}
+										</div>
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
-				</div>
-			</div>
+				</>
+			)}
 		</>
 	);
 };
 export const UpcomingMoviesList = () => {
+	const [Movie, setMovie] = useState({
+		loading: false,
+		result: {
+			list: [],
+		},
+	});
+	useEffect(() => {
+		setMovie((prevState) => ({
+			...prevState,
+			loading: true,
+		}));
+
+		axios({
+			method: 'GET',
+			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+		})
+			.then((res) => {
+				setMovie({
+					loading: false,
+					result: res.data,
+				});
+			})
+			.catch((res) => {
+				console.log('Failed');
+			});
+	}, []);
+
 	return (
 		<>
-			<div className='row d-flex card-movie-list'>
-				<div className='row container d-flex upcoming-movie-list'>
-					<div className='col card card-upcoming-movie-list col-2'>
-						<img className='image-card' src={BlackWidow} alt='' />
-						<p className='movie-title'>Black Widow</p>
-						<p className='movie-title movie-genre'>Action,Adventure,Sci-Fi</p>
-						<button className='btn btn-outline-danger'>Details</button>
+			{Movie.loading ? (
+				<Loading />
+			) : (
+				<>
+					<div className='row d-flex card-movie-list mb-5 '>
+						<div className='row container d-flex upcoming-a-movie-list '>
+							{!Movie.result.list.length ? (
+								<EmptyState />
+							) : (
+								<div className='row '>
+									<div className='col overflow-auto'>
+										<div className=' col d-flex  '>
+											{Movie.result.list.map((item, index) => {
+												//pake index sama key , kaitannya sama SEO
+												return (
+													<>
+														<div
+															className='col mt-5 mb-5 card bg-transparent border-black margin-card col-sm-5 col-md-2  justify-content-center align-items-center'
+															key={index}
+														>
+															<p className='h5 mt-4'>{item.title}</p>
+															<img
+																className='image-card -now-showing'
+																src={`http://localhost:3001/uploads/${item.cover}`}
+																alt={item.title}
+																title={item.title}
+																width={100}
+																height={100}
+															/>
+														</div>
+													</>
+												);
+											})}
+										</div>
+									</div>
+								</div>
+							)}
+						</div>
 					</div>
-
-					<div className='col card card-upcoming-movie-list  margin-card col-2 '>
-						<img className='image-card' src={TheWitches} alt='' />
-						<p className='movie-title'>The Witches</p>
-						<p className='movie-title movie-genre'>Adventure,Comedy,Family</p>
-						<button className='btn btn-outline-danger'>Details</button>
-					</div>
-
-					<div className='col card card-upcoming-movie-list col-2 '>
-						<img className='image-card' src={Tenet} alt='' />
-						<p className='movie-title'>Tenet</p>
-						<p className='movie-title movie-genre'>Action,Sci-Fi</p>
-						<button className='btn btn-outline-danger'>Details</button>
-					</div>
-
-					<div className='col card card-upcoming-movie-list margin-card col-2'>
-						<img className='image-card' src={BlackWidow} alt='' />
-						<p className='movie-title'>Black Widow</p>
-						<p className='movie-title movie-genre'>Action,Adventure,Sci-Fi</p>
-						<button className='btn btn-outline-danger'>Details</button>
-					</div>
-
-					<div className='col card card-upcoming-movie-list col-2 '>
-						<img className='image-card' src={TheWitches} alt='' />
-						<p className='movie-title'>The Witches</p>
-						<p className='movie-title movie-genre'>Adventure,Comedy,Family</p>
-						<button className='btn btn-outline-danger'>Details</button>
-					</div>
-				</div>
-			</div>
+				</>
+			)}
 		</>
 	);
 };
 export const NowShowingMoviesListResponsive = () => {
+	const [Movie, setMovie] = useState({
+		loading: false,
+		result: {
+			list: [],
+		},
+	});
+	useEffect(() => {
+		setMovie((prevState) => ({
+			...prevState,
+			loading: true,
+		}));
+
+		axios({
+			method: 'GET',
+			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+		})
+			.then((res) => {
+				setMovie({
+					loading: false,
+					result: res.data,
+				});
+			})
+			.catch((res) => {
+				console.log('Failed');
+			});
+	}, []);
+
 	return (
 		<>
-			<div className='overflow-auto'>
-				<div className='row d-flex card-movie-list card-movie-list-a '>
-					<div className='row container d-flex upcoming-movie-list  '>
-						<div className='col card border-white col-2 upcoming-movie-list-a'>
-							<img className='image-card' src={Spiderman} alt='' />
-						</div>
-						<div className='col card border-white  margin-card col-2 upcoming-movie-list-a'>
-							<img className='image-card' src={TheLionKing} alt='' />
-						</div>
-						<div className='col card border-white col-2 upcoming-movie-list-a'>
-							<img className='image-card' src={JohnWick} alt='' />
-						</div>
-						<div className='col card border-white margin-card col-2 upcoming-movie-list-a'>
-							<img className='image-card' src={Spiderman} alt='' />
-						</div>
-						<div className='col card border-white col-2 upcoming-movie-list-a'>
-							<img className='image-card' src={TheLionKing} alt='' />
+			{Movie.loading ? (
+				<Loading />
+			) : (
+				<>
+					<div className='row d-flex card-movie-list '>
+						<div className='row container d-flex upcoming-a-movie-list '>
+							{!Movie.result.list.length ? (
+								<EmptyState />
+							) : (
+								<div className='row '>
+									<div className='col overflow-auto'>
+										<div className=' col d-flex  '>
+											{Movie.result.list.map((item, index) => {
+												//pake index sama key , kaitannya sama SEO
+												return (
+													<>
+														<div
+															className='col card bg-transparent border-white margin-card col-5  justify-content-center align-items-center'
+															key={index}
+														>
+															<p className='h5 mt-4'>{item.title}</p>
+															<img
+																className='image-card -now-showing'
+																src={`http://localhost:3001/uploads/${item.cover}`}
+																alt={item.title}
+																title={item.title}
+																width={100}
+																height={100}
+															/>
+														</div>
+													</>
+												);
+											})}
+										</div>
+									</div>
+								</div>
+							)}
 						</div>
 					</div>
-				</div>
-			</div>
+				</>
+			)}
 		</>
 	);
 };

@@ -4,11 +4,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import './navbar.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { AuthLogout } from '../redux/actions/Auth';
+import { useDispatch } from 'react-redux/es/exports';
 const NavbarAdmin = ({ Nama = 'ASD' }) => {
+	let dispatch = useDispatch();
 	let navigate = useNavigate();
 	const [Refetch, setRefefetch] = useState(false);
 	const handlelogout = () => {
 		localStorage.removeItem('AccountData');
+		dispatch(AuthLogout());
 		// navigate('/Login', { replace: true });
 		window.location.reload();
 	};
@@ -16,8 +20,6 @@ const NavbarAdmin = ({ Nama = 'ASD' }) => {
 	useEffect(() => {}, [Refetch]);
 	return (
 		<>
-			{/* <!-- NAVIGATION BAR --> */}
-
 			<nav className='navbar navbar-expand-lg bg-white'>
 				<div className='container-fluid'>
 					<img className='image-logo-navbar' src={NavbarLogo} alt='' />
@@ -60,15 +62,15 @@ const NavbarAdmin = ({ Nama = 'ASD' }) => {
 								</p>
 							</li>
 						</ul>
-						<button
-							className='btn btn-white btn-sign-up width-main'
+						<text
+							className='btn btn-white btn-sign-up width-main  me-5'
 							type='submit'
 							onClick={(e) => {
 								handlelogout(e);
 							}}
 						>
 							{Nama}
-						</button>
+						</text>
 						<button
 							className='btn btn-white btn-sign-up width-main'
 							type='submit'

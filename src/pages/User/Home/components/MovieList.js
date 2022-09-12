@@ -20,7 +20,7 @@ export const NowShowingMoviesList = () => {
 
 		axios({
 			method: 'GET',
-			url: 'http://localhost:3001/api/v1/Movies/?limit=100&page=1',
+			url: `${process.env.URL_API}/Movies/nowshowing/?limit=100&page=1`,
 		})
 			.then((res) => {
 				setMovie({
@@ -52,15 +52,17 @@ export const NowShowingMoviesList = () => {
 												return (
 													<>
 														<div
-															className='col card border-white margin-card col-2'
+															className='col card border-white margin-card col-2 justify-content-center align-items-center'
 															key={index}
 														>
-															<p className='movie_title'>{item.title}</p>
+															<p className='h5 mt-4'>{item.title}</p>
 															<img
 																className='image-card -now-showing'
 																src={`http://localhost:3001/uploads/${item.cover}`}
 																alt={item.title}
 																title={item.title}
+																width={100}
+																height={100}
 															/>
 														</div>
 													</>
