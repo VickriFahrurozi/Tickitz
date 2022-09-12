@@ -20,7 +20,7 @@ export const NowShowingMoviesList = () => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/Movies/nowshowing/?limit=100&page=1`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/Movies/nowshowing/?limit=100&page=1`,
 		})
 			.then((res) => {
 				setMovie({
@@ -58,7 +58,7 @@ export const NowShowingMoviesList = () => {
 															<p className='h5 mt-4'>{item.title}</p>
 															<img
 																className='image-card -now-showing'
-																src={`http://localhost:3001/uploads/${item.cover}`}
+																src={`https://walrus-app-req5v.ondigitalocean.app/uploads/${item.cover}`}
 																alt={item.title}
 																title={item.title}
 																width={100}

@@ -83,7 +83,7 @@ export const AdminMovieList = () => {
 				const result = await axios({
 					method: 'PATCH',
 					data: formdata,
-					url: `${process.env.URL_API}/movies/id?id=${FormAddData.id}`,
+					url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/movies/id?id=${FormAddData.id}`,
 					headers: {
 						token: gettoken.token.data.token,
 					},
@@ -104,7 +104,7 @@ export const AdminMovieList = () => {
 			if (window.confirm(`Are You Sure ?`)) {
 				axios({
 					method: 'DELETE',
-					url: `${process.env.URL_API}/movies?id=${id}`,
+					url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/movies?id=${id}`,
 					headers: {
 						token: gettoken.token.data.token,
 					},
@@ -166,7 +166,7 @@ export const AdminMovieList = () => {
 																			<div className=' col-3 background-1'>
 																				<img
 																					className='image-card -now-showing'
-																					src={`http://localhost:3001/uploads/${item.cover}`}
+																					src={`https://walrus-app-req5v.ondigitalocean.app/uploads/${item.cover}`}
 																					alt={item.cover}
 																					title={item.title}
 																				/>

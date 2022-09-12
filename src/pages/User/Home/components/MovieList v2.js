@@ -44,7 +44,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/scheduled/`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/scheduled/`,
 		})
 			.then((res) => {
 				setMovieSchedule(res.data.list);
@@ -122,7 +122,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 				const result = await axios({
 					method: 'POST',
 					data: FormAddData,
-					url: `${process.env.URL_API}/scheduled/`,
+					url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/scheduled/`,
 				});
 				if (result.data.status == 200) {
 					alert('BERHASIL');
@@ -140,7 +140,7 @@ export const NowShowingMoviesListv2 = ({ isAdmin = false }) => {
 				const result = await axios({
 					method: 'DELETE',
 					data: FormDeleteData,
-					url: `${process.env.URL_API}/scheduled/`,
+					url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/scheduled/`,
 				});
 				if (result.data.status == 200) {
 					alert('BERHASIL');

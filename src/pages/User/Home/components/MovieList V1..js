@@ -37,7 +37,7 @@ export const NowShowingMoviesList = () => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/scheduled/`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/scheduled/`,
 		})
 			.then((res) => {
 				setMovieSchedule({
@@ -120,7 +120,7 @@ export const UpcomingMoviesListResponsive = () => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/Movies/?limit=100&page=1`,
 		})
 			.then((res) => {
 				setMovie({
@@ -158,7 +158,7 @@ export const UpcomingMoviesListResponsive = () => {
 															<p className='h5 mt-4'>{item.title}</p>
 															<img
 																className='image-card -now-showing'
-																src={`http://localhost:3001/uploads/${item.cover}`}
+																src={`https://walrus-app-req5v.ondigitalocean.app/uploads/${item.cover}`}
 																alt={item.title}
 																title={item.title}
 																width={100}
@@ -194,7 +194,7 @@ export const UpcomingMoviesList = () => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/Movies/?limit=100&page=1`,
 		})
 			.then((res) => {
 				setMovie({
@@ -232,7 +232,7 @@ export const UpcomingMoviesList = () => {
 															<p className='h5 mt-4'>{item.title}</p>
 															<img
 																className='image-card -now-showing'
-																src={`http://localhost:3001/uploads/${item.cover}`}
+																src={`https://walrus-app-req5v.ondigitalocean.app/uploads/${item.cover}`}
 																alt={item.title}
 																title={item.title}
 																width={100}
@@ -268,7 +268,7 @@ export const NowShowingMoviesListResponsive = () => {
 
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/Movies/?limit=100&page=1`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/Movies/?limit=100&page=1`,
 		})
 			.then((res) => {
 				setMovie({
@@ -306,7 +306,7 @@ export const NowShowingMoviesListResponsive = () => {
 															<p className='h5 mt-4'>{item.title}</p>
 															<img
 																className='image-card -now-showing'
-																src={`http://localhost:3001/uploads/${item.cover}`}
+																src={`https://walrus-app-req5v.ondigitalocean.app/uploads/${item.cover}`}
 																alt={item.title}
 																title={item.title}
 																width={100}

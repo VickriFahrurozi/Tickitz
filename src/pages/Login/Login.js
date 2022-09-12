@@ -46,7 +46,7 @@ const Login = () => {
 			let convert = JSON.parse(localStorage.getItem('AccountData')) ?? {};
 			axios({
 				method: 'POST',
-				url: `${process.env.URL_API}/account/VerifyRole?token=${convert.data.token}`,
+				url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/account/VerifyRole?token=${convert.data.token}`,
 			})
 				.then((res) => {
 					if (res.data.role == 222) {
@@ -85,7 +85,7 @@ const Login = () => {
 		// 	const result = await axios({
 		// 		method: 'POST',
 		// 		data: LoginData,
-		// 		url: '${process.env.URL_API}/account/login',
+		// 		url: 'https://walrus-app-req5v.ondigitalocean.app/api/v1/account/login',
 		// 	});
 
 		// 	if (result.data.ID) {

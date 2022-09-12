@@ -44,7 +44,7 @@ export const LoginAuth = (formData) => {
 				email: formData.email,
 				password: formData.password,
 			},
-			url: `${process.env.URL_API}/account/login`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/account/login`,
 		})
 			.then((res) => {
 				if (res.data.ID) {
@@ -72,7 +72,7 @@ export const RegisterAuth = (formdata) => {
 				last_name: formdata.last_name,
 				phone_number: formdata.phone_number,
 			},
-			url: `${process.env.URL_API}/account`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/account`,
 		})
 			.then((res) => {
 				if (res.data.email) {

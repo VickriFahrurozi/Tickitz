@@ -37,26 +37,10 @@ const addMoviesError = (error) => {
 
 export const getMovies = (limit = 10, page = 1) => {
 	return (dispatch) => {
-		// dispatch(getMoviesRequest());
-		// try {
-		// 	const result = axios({
-		// 		method: 'GET',
-		// 		url: `${process.env.URL_API}/movies/?limit=${limit}&page=${page}`,
-		// 	});
-		// 	console.log(result);
-		// 	if (result.data) {
-		// 		dispatch(getMoviesSuccess(result.data));
-		// 		console.log('Berhasil');
-		// 	}
-		// } catch (err) {
-		// 	dispatch(getMoviesError(err));
-		// 	console.log('Error');
-		// }
-
 		dispatch(getMoviesRequest()); //PAKE THEN CATCH
 		axios({
 			method: 'GET',
-			url: `${process.env.URL_API}/movies/?limit=${limit}&page=${page}`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/movies/?limit=${limit}&page=${page}`,
 		})
 			.then((res) => {
 				//success
@@ -73,7 +57,7 @@ export const addMovies = (data, token) => {
 		axios({
 			method: 'POST',
 			data: data,
-			url: `${process.env.URL_API}/movies/`,
+			url: `https://walrus-app-req5v.ondigitalocean.app/api/v1/movies/`,
 			headers: {
 				token: token,
 			},
