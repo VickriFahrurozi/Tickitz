@@ -6,7 +6,7 @@ import HomeAdmin from './pages/Admin/Home/HomeAdmin';
 import Login from './pages/Login/Login';
 import Register from './pages/Login/Register';
 import { Routes, Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
 
 const MainNavigation = () => {
